@@ -7,10 +7,15 @@ import { BioComponent } from './bio/bio.component';
 import { ResumeComponent } from './resume/resume.component';
 import { AngularComponent } from './angular/angular.component';
 import { JamzComponent } from './jamz/jamz.component';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { TodoComponent } from './todo/todo.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+
 
 @NgModule({
   declarations: [
@@ -18,13 +23,17 @@ import { MatCardModule } from '@angular/material/card';
     BioComponent,
     ResumeComponent,
     AngularComponent,
-    JamzComponent
+    JamzComponent,
+    CalculatorComponent,
+    TodoComponent,
+    ChatbotComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
