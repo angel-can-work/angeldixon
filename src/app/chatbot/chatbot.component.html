@@ -10,3 +10,6 @@
     <input (keyup.enter)="postLexText();" [(ngModel)]="userInput">
     <button title="Post Lex Text Button" (click)="postLexText(userInput.value)" [disabled]="userInput===''"> Send </button>
 </div>
+<div class="clear-button">
+    <button title="Clear messages" (click)="messages = []" [disabled]="messages.length < 1"> Clear </button>
+</div>
