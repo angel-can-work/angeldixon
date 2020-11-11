@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  AWS_ACCESS_KEY_ID: 'AKIATFN5DVZFTU2NKQME',
+  AWS_SECRET_ACCESS_KEY: 'dlDR9f92I9p+JDHhTMweWm0K1N5R+k/Embc6jfEa'
 };
 
 /*
