@@ -17,6 +17,7 @@ export class ChatbotComponent implements AfterViewInit {
   lex: LexRuntime;
   messages: Message[];
   lexState: string;
+  userInput: string;
   @ViewChild('scroll', { static: true }) scroll: any;
 
   constructor() {
@@ -26,15 +27,15 @@ export class ChatbotComponent implements AfterViewInit {
       region: 'us-east-1'
     });
     this.messages = [];
+    this.userInput = '';
   }
 
   ngAfterViewInit() {
     this.scroll.nativeElement.scrollTop = this.scroll.nativeElement.scrollHeight;
   }
 
-  postLexText(userInput) {
-    this.messages.push(new Message(userInput, 'User'));
-
+  postLexText() {
+    this.messages.push(new Message(this.userInput, 'User'));
     const params = {
       botAlias: 'schedule',
       botName: 'ScheduleAnAppointment',
@@ -42,7 +43,8 @@ export class ChatbotComponent implements AfterViewInit {
       userId: 'User',
     };
 
-    params.inputText = userInput;
+    params.inputText = this.userInput;
+    this.userInput = '';
     // place the following in a service
     this.lex.postText(params, (err, data) => {
       if (err) {

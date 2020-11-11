@@ -2,11 +2,11 @@
     <ng-container *ngIf="messages.length > 1">
         <div class="flex message" [ngClass]="{'align-right': even}" 
         *ngFor="let message of messages; let last = last; let even = even;">
-            {{message.content}}
+           <span [ngClass]="{'even': even}">{{message.content}}</span> 
         </div>
     </ng-container>
 </div>
 <div class="flex input">
-    <input (keyup.enter)="postLexText(userInput.value); userInput.value=''" #userInput>
-    <button title="Post Lex Text Button" (click)="postLexText(userInput.value)"> Send </button>
+    <input (keyup.enter)="postLexText();" [(ngModel)]="userInput">
+    <button title="Post Lex Text Button" (click)="postLexText(userInput.value)" [disabled]="userInput===''"> Send </button>
 </div>

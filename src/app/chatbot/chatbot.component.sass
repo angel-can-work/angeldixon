@@ -1,14 +1,31 @@
-.chatbot 
+.chatbot
     height: 20em
     border: black 2px solid
     border-radius: 4px
     overflow-y: hidden
+    padding: 10px
+
+button
+    background-color: black
+    color: white
+    border: unset
+    &:disabled
+        background-color: lightgray
 
 .align-right
     justify-content: flex-end
 
-.message
-    padding: 10px
+span
+    width: fit-content
+    background: red
+    color: white
+    padding: 5px 15px
+    border-radius: 25px
+    max-width: 50%
+
+.even
+    background: lightgray
+    color: black
 
 .input
     height: 2em
