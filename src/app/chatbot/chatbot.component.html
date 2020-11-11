@@ -1,1 +1,7 @@
-<p>chatbot works!</p>
+<ng-container *ngFor="let message of messages">
+<div>
+{{message.sender}}: {{message.content}}
+</div>
+</ng-container>
+<input (keyup.enter)="postLexText(userInput.value); userInput.value=''" #userInput>
+<button title="Post Lex Text Button" (click)="postLexText(userInput.value)"> Post Text </button>
