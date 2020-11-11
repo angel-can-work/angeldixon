@@ -9,8 +9,7 @@ import { ResumeComponent } from './resume/resume.component';
 const routes: Routes = [
   { path: '', component: BioComponent },
   { path: 'resume', component: ResumeComponent },
-  { path: 'angular', component: AngularComponent },
-  { path: 'jamz', component: JamzComponent}
+  { path: 'angular', component: AngularComponent }
 ];
 
 @NgModule({

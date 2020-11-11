@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { FormsModule } from '@angular/forms';
 
 import { CalculatorComponent } from './calculator.component';
 
@@ -10,7 +11,10 @@ describe('CalculatorComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ CalculatorComponent ],
-      imports: [MatGridListModule]
+      imports: [
+        MatGridListModule,
+        FormsModule
+      ]
     })
     .compileComponents();
   }));

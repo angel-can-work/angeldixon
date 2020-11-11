@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { ChatbotComponent } from './chatbot.component';
 
@@ -8,7 +9,8 @@ describe('ChatbotComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChatbotComponent ]
+      declarations: [ ChatbotComponent ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));
