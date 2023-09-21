@@ -22,8 +22,8 @@ export class ChatbotComponent implements AfterViewInit {
 
   constructor() {
     this.lex = new LexRuntime({
-      accessKeyId: environment.AWS_ACCESS_KEY_ID,
-      secretAccessKey: environment.AWS_SECRET_ACCESS_KEY,
+      // accessKeyId: environment.AWS_ACCESS_KEY_ID,
+      // secretAccessKey: environment.AWS_SECRET_ACCESS_KEY,
       region: 'us-east-1'
     });
     this.messages = [];
@@ -34,7 +34,7 @@ export class ChatbotComponent implements AfterViewInit {
     this.scroll.nativeElement.scrollTop = this.scroll.nativeElement.scrollHeight;
   }
 
-  postLexText() {
+  postLexText(text?: string) {
     this.messages.push(new Message(this.userInput, 'User'));
     const params = {
       botAlias: 'schedule',

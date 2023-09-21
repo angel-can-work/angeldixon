@@ -8,7 +8,7 @@
     <mat-selection-list>
         <mat-list-option *ngIf="todoList.length < 6" checkboxPosition="before" disabled>
             <mat-icon mat-list-icon >clear</mat-icon>
-                <mat-form-field appearance="standard" class="example-full-width">
+                <mat-form-field appearance="outline" class="example-full-width">
                     <input matInput placeholder="Ex. Buy groceries" (keyup.enter)="onSubmit(todoItem.value);todoItem.value=''" 
                         (keydown)="handleInput($event)" #todoItem>
                 </mat-form-field>
